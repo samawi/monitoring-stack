@@ -1,0 +1,18 @@
+global:
+  scrape_interval: 30s
+  scrape_timeout: 10s
+
+rule_files:
+  - alert.yml
+
+scrape_configs:
+  - job_name: services
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'prometheus:9090'
+  - job_name: windows_node
+    static_configs:
+            - targets: ['10.7.7.185:9182']
+            - targets: ['10.7.7.92:9182']
+

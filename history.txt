@@ -1,0 +1,734 @@
+    1  sudo vi /etc/hostname
+    2  cd
+    3  curl -sSL get.docker.com | sh
+    4  sudo usermod -aG docker mawan
+    5  sudo vi /etc/docker/daemon.json
+    6  sudo vi /boot/firmware/cmdline.txt 
+    7  sudo reboot
+    8  sudo apt dist-upgrade
+    9  sudo vi /etc/docker/daemon.json
+   10  sudo vi /etc/sysctl.conf 
+   11  sudo reboot
+   12  systemctl status docker
+   13  docker ps
+   14  sudo systemctl status docker
+   15  docker run hello-world
+   16  git
+   17  ls
+   18  git clone https://github.com/samawi/weather-image1.git
+   19  ls
+   20  cd weather-image1/
+   21  ls
+   22  ls -l
+   23  mkdir images
+   24  ls
+   25  cd public-html/
+   26  ls
+   27  mkdir images
+   28  ls
+   29  cd ..
+   30  ls
+   31  tree
+   32  sudo apt install tree
+   33  ls
+   34  tree
+   35  docker run -it ubuntu date
+   36  docker-compose
+   37  sudo apt install docker-compose
+   38  docker-compose --version
+   39  docker-compose up
+   40  ls
+   41  vi docker-compose.yml 
+   42  docker-compose up
+   43  vi docker-compose.yml 
+   44  docker-compose up
+   45  sudo reboot
+   46  docker ps
+   47  ip a
+   48  ps aux | grep cloud
+   49  ps aux | more
+   50  sudo shutdown -h now
+   51  ls
+   52  mkdir remoteit-install
+   53  cd remoteit-install/
+   54  ls
+   55  curl -LkO https://raw.githubusercontent.com/remoteit/installer/master/scripts/auto-install.sh
+   56  chmod +x ./auto-install.sh
+   57  sudo ./auto-install.sh
+   58  sudo connectd_installer 
+   59  w
+   60  exit
+   61  docker ps
+   62  sudo systemctl status docker
+   63  ls
+   64  nmap
+   65  exit
+   66  iwconfig
+   67  iwlist
+   68  sudo apt install wireless-tools
+   69  iwconfig
+   70  sudo iwlist wlan0 scan
+   71  sudo ifconfig wlan0 up
+   72  ifconfig
+   73  sudo apt install net-tools
+   74  ip wlan
+   75  ip wlan0
+   76  ip a
+   77  ip
+   78  ifconfig
+   79  sudo ifconfig wlan0
+   80  sudo ifconfig wlan0 up
+   81  sudo iwlist wlan0 scan
+   82  sudo iwlist wlan0 scan | grep ESSID
+   83  wpa_passphrase martdeco1 sayatinggaldiwinthrop
+   84  wpa_passphrase martdeco1 sayatinggaldiwinthrop | sudo tee /etc/wpa_supplicant.conf
+   85  more /etc/wpa_supplicant.conf 
+   86  sudo vi /etc/wpa_supplicant.conf 
+   87  more /lib/systemd/system/wpa_supplicant.service
+   88  sudo cp /lib/systemd/system/wpa_supplicant.service /etc/systemd/system/
+   89  sudo vi /etc/systemd/system/wpa_supplicant.service 
+   90  sudo systemctl daemon-reload
+   91  sudo systemctl status wap_supplicant.service
+   92  sudo systemctl enable wpa_supplicant.service
+   93  sudo vi /etc/systemd/system/dhclient.service
+   94  sudo systemctl enable dhclient.service
+   95  ps aux | grep avahi
+   96  sudo apt install avahi-daemon
+   97  sudo systemctl start avahi-daemon
+   98  sudo systemctl enable avahi-daemon
+   99  sudo ufw allow 5353/udp
+  100  sudo hostnamectl set-hostname ubuntu4
+  101  sudo systemctl restart avahi-daemon
+  102  sudo systemctl status avahi-daemon
+  103  rfkill
+  104  sudo apt install rfkill
+  105  sudo rfkill unblock wifi
+  106  sudo vi /etc/systemd/system/unblock-wifi.service
+  107  sudo systemctl enable unblock-wifi
+  108  ip a
+  109  sudo reboot
+  110  ip a
+  111  netstat -rn
+  112  docker ps
+  113  sudo reboot
+  114  df
+  115  ip a
+  116  docker ps
+  117  traceroute google.com
+  118  sudo apt install inetutils-traceroute
+  119  traceroute google.com
+  120  exit
+  121  ls
+  122  cd weather-image1/
+  123  ls
+  124  vi docker-compose.yml 
+  125  code .
+  126  more docker-compose.yml 
+  127  cd
+  128  ssh -i "arm-based-key-pair-jan-2021.pem" ubuntu@ec2-13-212-251-61.ap-southeast-1.compute.amazonaws.com
+  129  exit
+  130  exit
+  131  docker ps
+  132  ls
+  133  cd weather-image1/
+  134  ls
+  135  docker-compose down
+  136  exit
+  137  sudo apt update
+  138  exit
+  139  sudo apt update
+  140  df
+  141  w
+  142  top
+  143  clear
+  144  exit
+  145  vi .ssh/known_hosts 
+  146  exit
+  147  cd .ssh
+  148  ls
+  149  ls -al
+  150  more known_hosts 
+  151  vi known_hosts 
+  152  exit
+  153  ls
+  154  cd django-dev1/
+  155  ls
+  156  sudo apt update
+  157  sudo apt upgrade
+  158  ls
+  159  cd
+  160  ls
+  161  mkdir miniconda-install
+  162  ls
+  163  cd miniconda-install/
+  164  ls
+  165  curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  166  curl -s https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  167  lear
+  168  clear
+  169  curl
+  170  curl --help
+  171  curl --manual
+  172  |more
+  173  curl --manual|more
+  174  curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  175  ls
+  176  l s-l
+  177  ls -l
+  178  bash Miniconda3-latest-Linux-x86_64.sh 
+  179  ls
+  180  rm Miniconda3-latest-Linux-x86_64.sh 
+  181  curl https://repo.anaconda.com/pkgs/misc/gpgkeys/anaconda.asc | gpg --dearmor > conda.gpg
+  182  install -o root -g root -m 644 conda.gpg /usr/share/keyrings/conda-archive-keyring.gpg
+  183  sudo install -o root -g root -m 644 conda.gpg /usr/share/keyrings/conda-archive-keyring.gpg
+  184  gpg --keyring /usr/share/keyrings/conda-archive-keyring.gpg --no-default-keyring --fingerprint 34161F5BF5EB1D4BFBBB8F0A8AEB4F8B29D82806
+  185  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/conda-archive-keyring.gpg] https://repo.anaconda.com/pkgs/misc/debrepo/conda stable main" | sudo tee -a /etc/apt/sources.list.d/conda.list
+  186  sudo apt update
+  187  sudo apt install anaconda
+  188  sudo apt install conda
+  189  exit
+  190  ls
+  191  cd miniconda-install/
+  192  ls
+  193  more conda.gpg 
+  194  ls
+  195  sudo apt install
+  196  sudo apt update
+  197  sudo apt install conda
+  198  sudo apt install anaconda
+  199  uname -a
+  200  curl -O https://repo.anaconda.com/archive/Anaconda3-20.02-Linux-aarch64.sh
+  201  ls
+  202  ls -l
+  203  curl -O https://github.com/conda-forge/miniforge/releases/download/4.9.2-5/Miniforge3-Linux-aarch64.sh
+  204  ls
+  205  ls -
+  206  ls -l
+  207  rm *.sh
+  208  ls
+  209  mv ~/Miniforge3-Linux-aarch64.sh .
+  210  ls
+  211  sudo bash Miniforge3-Linux-aarch64.sh 
+  212  bash Miniforge3-Linux-aarch64.sh 
+  213  exit
+  214  ls
+  215  sudo bash
+  216  ls
+  217  cd
+  218  ls
+  219  cd miniconda-install/
+  220  ls
+  221  ls -l
+  222  cd ..
+  223  ls
+  224  cd miniforge3/
+  225  ls
+  226  cd ..
+  227  ls
+  228  conda --version
+  229  ls
+  230  conda update conda
+  231  ls
+  232  cd django-dev1/
+  233  ls
+  234  conda create --name myDjangoEnv django
+  235  conda info --env
+  236  conda info --envs
+  237  conda activate myDjangoEnv
+  238  conda install django
+  239  python -m django --version
+  240  python
+  241  ls
+  242  mkdir My_Django_Stuff
+  243  cd My_Django_Stuff/
+  244  ls
+  245  django-admin startproject first_project
+  246  tree
+  247  ls
+  248  exit
+  249  source /home/mawan/miniforge3/bin/activate
+  250  conda activate myDjangoEnv
+  251  conda install --name myDjangoEnv pylint -y
+  252  exit
+  253  code .
+  254  ls
+  255  cd weather-image1/
+  256  ls
+  257  more readme.md
+  258  sudo apt update
+  259  sudo apt upgrade
+  260  sudo reboot
+  261  exit
+  262  sudo apt update
+  263  exit
+  264  sudo apt update
+  265  sudo apt upgrade
+  266  clear
+  267  ls
+  268  df
+  269  ls -l
+  270  ls
+  271  exit
+  272  ls
+  273  mkdir laravel-docker
+  274  cd laravel-docker/
+  275  ls
+  276  docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+  277  ls
+  278  cd src
+  279  ls
+  280  sudo rm -r *
+  281  ls
+  282  ls -l
+  283  ls
+  284  ls -al
+  285  sudo rm .*
+  286  sudo rm -r .*
+  287  ls
+  288  ls -a
+  289  ls -al
+  290  cd ..
+  291  ls
+  292  pwd
+  293  docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+  294  ls -l
+  295  cd src
+  296  ls
+  297  ls -al
+  298  sudo passwd
+  299  sudo root
+  300  su root
+  301  exit
+  302  sudo vi /etc/ssh/sshd_config
+  303  sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+  304  sudo vi /etc/ssh/sshd_config
+  305  sudo service ssh restart
+  306  exit
+  307  su root
+  308  ls
+  309  cd laravel-docker/
+  310  ls
+  311  docker-compose up -d server php mysql
+  312  docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+  313  docker run hypriot/rpi-mysql
+  314  ls
+  315  cd laravel-docker/
+  316  ls
+  317  exit
+  318  sudo apt update
+  319  exit
+  320  conda update conda
+  321  exit
+  322  sudo apt update
+  323  sudo apt upgrade
+  324  docker ps
+  325  exit
+  326  ls
+  327  sudo apt update
+  328  conda update conda
+  329  ssh mawan@192.168.1.243
+  330  ls
+  331  pip3 install speedtest-cli
+  332  speedtest
+  333  w
+  334  sudo apt update
+  335  sudo apt upgrade
+  336  ssh mawan@192.168.1.243
+  337  exit
+  338  conda update conda
+  339  ssh mawan@192.168.1.243
+  340  sudo apt update
+  341  sudo apt upgrade
+  342  ssh mawan@192.168.1.243
+  343  exit
+  344  sudo apt update
+  345  ssh mawan@192.168.1.243
+  346  conda update conda
+  347  exit
+  348  ip a
+  349  exit
+  350  sudo apt update
+  351  sudo apt upgrade
+  352  conda update conda
+  353  exit
+  354  sudo reboot
+  355  sudo apt update
+  356  exit
+  357  top
+  358  w
+  359  exit
+  360  w
+  361  exit
+  362  ssh mawan@192.168.1.253
+  363  ssh mawan@192.168.1.203
+  364  sudo apt update
+  365  ssh mawan@192.168.1.203
+  366  exit
+  367  sudo apt upgrade
+  368  ssh mawan@192.168.1.203
+  369  sudo apt update
+  370  sudo apt upgrade
+  371  conda update conda
+  372  ssh mawan@192.168.1.203
+  373  sudo apt update
+  374  sudo apt upgrade
+  375  sudo reboot
+  376  sudo apt update
+  377  conda update conda
+  378  exit
+  379  sudo apt update
+  380  sudo apt upgrade
+  381  ssh mawan@192.168.1.203
+  382  sudo apt update
+  383  sudo apt upgrade
+  384  sudo reboot
+  385  sudo apt update
+  386  history | grep fetch
+  387  sudo apt install neofetch
+  388  neofetch 
+  389  docker ps
+  390  docker image
+  391  docker images
+  392  exit
+  393  sudo apt update
+  394  exit
+  395  w
+  396  ifconfig
+  397  exit
+  398  w
+  399  ssh -p 65022 mawan@martimbang2.ddns.net
+  400  ssh -p 65022 pi@martimbang2.ddns.net
+  401  exit
+  402  sudo apt update
+  403  sudo apt upgrade
+  404  ls
+  405  cd weather-image1/
+  406  ls
+  407  ls -al
+  408  sudo apt update
+  409  sudo apt upgrade
+  410  exit
+  411  sudo apt update
+  412  sudo apt upgrade
+  413  ssh -p 65022 pi@martimbang2.ddns.net
+  414  exit
+  415  sudo restart
+  416  sudo reboot
+  417  ls
+  418  curl https://github.com/prometheus/prometheus/releases/download/v2.27.1/prometheus-2.27.1.linux-amd64.tar.gz
+  419  ls
+  420  mkdir monitoring-apps
+  421  cd monitoring-apps/
+  422  ls
+  423  mkdir docker-f
+  424  cd docker-f/
+  425  ls
+  426  mkdir prometheus
+  427  cd prometheus/
+  428  ls
+  429  docker pull prom/prometheus
+  430  ls
+  431  docker run prom/prometheus
+  432  docker run -p 9090:9090 prom/prometheus
+  433  telnet localhost:9090
+  434  telnet 127.0.0.1:9090
+  435  telnet 0.0.0.0:9090
+  436  telnet 0.0.0.0 9090
+  437  telnet localhost 9090
+  438  exit
+  439  docker ps
+  440  exit
+  441  ls
+  442  docker ps
+  443  ls
+  444  cd monitoring-apps/
+  445  ls
+  446  cd docker-f/
+  447  ls
+  448  cd prometheus/
+  449  ls
+  450  ls -al
+  451  docker pull prom/snmp-exporter
+  452  docker images
+  453  ls
+  454  docker run prom/snmp-exporter
+  455  docker run -p 9116:9116 prom/snmp-exporter
+  456  ssh root@192.168.1.1
+  457  ls
+  458  cd monitoring-apps/
+  459  ls
+  460  history | grep git
+  461  git clone https://github.com/carlosedp/ddwrt-monitoring.git
+  462  ls
+  463  cd ddwrt-monitoring/
+  464  ls
+  465  vi docker-compose.yml 
+  466  docker ps
+  467  docker --help
+  468  docker ps
+  469  docker stop nice_shirley sad_shtern
+  470  ls
+  471  cd prometheus/
+  472  ls
+  473  more prometheus.yml 
+  474  ssh root@192.168.1.1
+  475  snmp
+  476  snmpwalk
+  477  sudo apt install snmp
+  478  snmpwalk
+  479  snmpwalk -v 1 192.168.1.1
+  480  snmpwalk -v1 192.168.1.1
+  481  snmpwalk 192.168.1.1
+  482  ssh root@192.168.1.1
+  483  exit
+  484  docker ps
+  485  ls
+  486  cd monitoring-apps/
+  487  ls
+  488  cd docker-f/
+  489  ls
+  490  cd prometheus/
+  491  ls
+  492  docker images
+  493  ls
+  494  vi prometheus.yml
+  495  vi alert.yml
+  496  vi alert.yml 
+  497  vi docker-compose.yml
+  498  docker-compose up -d
+  499  docker ps
+  500  docker-compose up -d
+  501  docker ps
+  502  ls -al
+  503  cd prometheus/
+  504  ls
+  505  cd ..
+  506  ls
+  507  mv alert.yml prometheus.yml prometheus
+  508  ls -al
+  509  chown mawan:mawan prometheus
+  510  sudo chown mawan:mawan prometheus
+  511  ls -l
+  512  mv alert.yml prometheus.yml prometheus
+  513  ls
+  514  docker-compose up -d
+  515  docker ps
+  516  more docker-compose.yml 
+  517  ls
+  518  cd prometheus/
+  519  ls
+  520  ls -al
+  521  cd ..
+  522  ls
+  523  docker images
+  524  ls -l
+  525  vi docker-compose.yml 
+  526  cd ..
+  527  ls
+  528  pwd
+  529  cd prometheus/
+  530  ls
+  531  docker-compose up -d
+  532  docker ps
+  533  docker-compose up
+  534  vi prometheus/alert.yml 
+  535  docker-compose up -d
+  536  docker ps
+  537  ls
+  538  mkdir grafana
+  539  cd grafana/
+  540  ls
+  541  mkdir provisioning/datasources
+  542  mkdir provisioning
+  543  cd provisioning/
+  544  mkdir datasources
+  545  cd datasources/
+  546  vi prometheus_ds.yml
+  547  ls
+  548  cd ..
+  549  ls
+  550  cd ..
+  551  ls
+  552  cd ..
+  553  ls
+  554  vi docker-compose.yml 
+  555  docker-compose down
+  556  docker-compose up -d
+  557  docker ps
+  558  ls
+  559  cd prometheus/
+  560  ls
+  561  vi prometheus.yml 
+  562  ls
+  563  tar tvf node_exporter-1.1.2.linux-amd64.tar 
+  564  tar xvf node_exporter-1.1.2.linux-amd64.tar 
+  565  ls
+  566  cd node_exporter-1.1.2.linux-amd64/
+  567  ls
+  568  ls -l
+  569  ./node_exporter 
+  570  ls
+  571  cd monitoring-apps/
+  572  ls
+  573  cd docker-f/
+  574  ls
+  575  cd prometheus/
+  576  ls
+  577  cd prometheus/
+  578  ls
+  579  vi prometheus.yml 
+  580  history
+  581  curl -X POST http://localhost:9000/-/reload
+  582  docker ps
+  583  ssh -p 65022 mawan@martimbang.ddns.net -L 3000:192.168.1.171:9000
+  584  ssh -p 65022 mawan@martimbang.ddns.net -L 9000:192.168.1.171:9000
+  585  ping google.com
+  586  ssh -p 65022 mawan@martimbang.ddns.net -L 9000:192.168.1.171:9000
+  587  ssh -p 65022 mawan@martimbang.ddns.net -L 8000:192.168.1.171:9000
+  588  ssh -p 65022 mawan@martimbang.ddns.net
+  589  ssh -p 65023 mawan@martimbang.ddns.net
+  590  ssh -p 65022 mawan@martimbang.ddns.net
+  591  ssh -p 65022 mawan@martimbang2.ddns.net
+  592  exit
+  593  ping 192.168.1.236
+  594  ls
+  595  cd monitoring-apps/
+  596  ls
+  597  cd docker-f/
+  598  ls
+  599  cd prometheus/
+  600  ls
+  601  cd prometheus/
+  602  ls
+  603  more prometheus.yml 
+  604  exit
+  605  docker ps
+  606  ls
+  607  cd monitoring-apps/docker-f/
+  608  ls
+  609  cd prometheus/
+  610  ls
+  611  docker-compose up -d
+  612  docker ps
+  613  ls
+  614  cd prometheus/
+  615  ls
+  616  vi prometheus.yml 
+  617  history
+  618  curl -X POST http://localhost:9000/-/reload
+  619  ls
+  620  cd monitoring-apps/
+  621  ls
+  622  cd docker-f/
+  623  ls
+  624  cd prometheus/
+  625  ls
+  626  cd ..
+  627  ls
+  628  pwd
+  629  exit
+  630  docker ps
+  631  history
+  632  snmp
+  633  snmpwalk
+  634  snmpwalk -v2c -c public -O n 192.168.42.1
+  635  snmpwalk -v2c -c public -O n 192.168.1.2
+  636  snmpwalk -v2c -c public -O n 192.168.1.2 .1.3.6.1.2.1.1.5.0
+  637  snmpget -v2c -c public -O n 192.168.1.2 .1.3.6.1.2.1.1.5.0
+  638  snmpget -v2c -c public 192.168.1.2 .1.3.6.1.2.1.1.5.0
+  639  snmpwalk -v2c -c public -O n 192.168.1.2 .1.3.6.1.2.1.2.2.1.5
+  640  exit
+  641  docker ps
+  642  sudo apt update
+  643  sudo apt upgrade
+  644  exit
+  645  docker ps
+  646  ls
+  647  cd monitoring-apps/
+  648  ls
+  649  cd docker-f/
+  650  ls
+  651  cd prometheus/
+  652  ls
+  653  docker-compose down
+  654  docker-compose up -d
+  655  ls
+  656  cd prometheus/
+  657  l
+  658  ls
+  659  exit
+  660  ls
+  661  cd monitoring-apps/
+  662  ls
+  663  cd docker-f/
+  664  ls
+  665  cd prometheus/
+  666  ls
+  667  mkdir snmp
+  668  cd snmp
+  669  ls
+  670  pwd
+  671  ls
+  672  docker build -t snmp-generator .
+  673  ls
+  674  mkdir mibs
+  675  ls
+  676  mkdir out
+  677  ls
+  678  docker run -ti -v mibs:/root/.snmp/mibs -v generator.yml:/opt/generator.yml:ro -v out:/opt/ snmp-generator generate
+  679  docker run -ti -v ./mibs:/root/.snmp/mibs -v ./generator.yml:/opt/generator.yml:ro -v ./out:/opt/ snmp-generator generate
+  680  pwd
+  681  docker run -ti -v /home/mawan/monitoring-apps/docker-f/prometheus/snmp/mibs:/root/.snmp/mibs -v /home/mawan/monitoring-apps/docker-f/prometheus/snmp/generator.yml:/opt/generator.yml:ro -v /home/mawan/monitoring-apps/docker-f/prometheus/snmp/out:/opt/ snmp-generator generate
+  682  exit
+  683  cd monitoring-apps/docker-f/
+  684  ls
+  685  cd prometheus/
+  686  ls
+  687  more docker-compose.yml 
+  688  ls
+  689  docker-compose up -d
+  690  snmpwalk -v2 -c public 192.168.1.2 1.3.6.1.2.1.31.1.1.1.5
+  691  snmpwalk -v2c -c public 192.168.1.2 .1
+  692  snmpwalk -v2c -c public 192.168.1.2 -O n .1
+  693  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31
+  694  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31.1.1.1.6.1
+  695  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.6.1
+  696  snmpwalk -v2c -c public 192.168.1.2 1.3.6.1.2.1.31.1.1.1.18
+  697  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.18
+  698  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  699  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.1
+  700  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  701  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31.1.1.1
+  702  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.2.2.1.2
+  703  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31
+  704  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1
+  705  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1
+  706  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1
+  707  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.2.2.1.2.1
+  708  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31.1.1.1.6
+  709  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1
+  710  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1
+  711  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1
+  712  snmpwalk -v2c -c public 192.168.1.2 -O n .1.3.6.1.2.1.31.1.1.1
+  713  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  714  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.18
+  715  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  716  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.2.2.1.2
+  717  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  718  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.2.2.1.2
+  719  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.2
+  720  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  721  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.18
+  722  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  723  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.2.2.1.2
+  724  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.3
+  725  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  726  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.18
+  727  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  728  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.2.2.1.2
+  729  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.4
+  730  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  731  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1.5
+  732  snmpwalk -v2c -c public 192.168.1.2 .1.3.6.1.2.1.31.1.1.1
+  733  history
+  734  history > history.txt
