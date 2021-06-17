@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   prometheus:
@@ -8,8 +8,8 @@ services:
     volumes:
       - ./prometheus:/etc/prometheus
       - prometheus-data:/prometheus
-# command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
-    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus-office.yml
+    # command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus-home.yml
   grafana:
     image: grafana/grafana
     ports:
@@ -28,9 +28,6 @@ services:
 #    restart: always
 #    command: --config.file=/etc/snmp_exporter/snmp.yml
 
-
-
 volumes:
   prometheus-data:
   grafana-data:
-
